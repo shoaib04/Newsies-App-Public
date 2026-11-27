@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f1eee7">
+  <meta name="newsies-api-base" content="http://localhost:8000">
   <meta name="description" content="A preview of the Newsies developer dashboard.">
   <title>Developer dashboard — Newsies</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -27,16 +28,17 @@
         <a href="index.html#api-preview"><span aria-hidden="true">≡</span> Documentation</a>
       </nav>
       <div class="dashboard-profile">
-        <span class="dashboard-avatar" aria-hidden="true">NS</span>
-        <strong>Newsies preview</strong>
-        <small>Developer workspace</small>
+        <span class="dashboard-avatar" id="dashboard-avatar" aria-hidden="true">--</span>
+        <strong id="dashboard-name">Loading account…</strong>
+        <small id="dashboard-email">Checking session…</small>
+        <button type="button" id="logout-button" class="button button-light" disabled>Log out</button>
       </div>
     </aside>
 
     <div class="dashboard-main">
       <header class="dashboard-topbar">
         <p class="dashboard-breadcrumb">Workspace / <strong>Overview</strong></p>
-        <span class="preview-badge"><i></i> PREVIEW ONLY</span>
+        <span class="preview-badge" id="session-status"><i></i> CHECKING SESSION</span>
       </header>
 
       <main id="main" class="dashboard-content">
@@ -52,10 +54,10 @@
         </div>
 
         <section class="dashboard-grid" aria-label="Account summary">
-          <article class="metric-card"><span>REQUESTS TODAY</span><strong>1,248</strong><small><b class="metric-trend">↑ 18%</b> from yesterday</small></article>
-          <article class="metric-card"><span>DAILY LIMIT</span><strong>1,000</strong><small>Per active key</small></article>
-          <article class="metric-card"><span>AVAILABLE SOURCES</span><strong>12</strong><small>Across 4 categories</small></article>
-          <article class="metric-card"><span>SERVICE STATUS</span><strong>Operational</strong><small><b class="metric-trend">●</b> 99.9% uptime</small></article>
+          <article class="metric-card"><span>REQUESTS (24H)</span><strong id="usage-total">--</strong><small>Across your API keys</small></article>
+          <article class="metric-card"><span>SUCCESSFUL REQUESTS</span><strong id="usage-successful">--</strong><small>HTTP 2xx responses</small></article>
+          <article class="metric-card"><span>AVAILABLE SOURCES</span><strong>--</strong><small>Rights-approved sources</small></article>
+          <article class="metric-card"><span>SERVICE STATUS</span><strong id="service-status">Checking</strong><small><b class="metric-trend">●</b> Account session</small></article>
         </section>
 
         <div class="dashboard-workspace">
@@ -75,10 +77,7 @@
 
           <section class="panel-card" id="api-keys" aria-labelledby="keys-title">
             <header class="panel-header"><h2 id="keys-title">API keys</h2><button type="button" id="new-key-button">+ New key</button></header>
-            <div class="key-list">
-              <div class="key-row"><div class="key-name"><strong>Production</strong><small>nws_••••••••••••••••••••••••</small></div><span class="key-state"><i></i> Active</span></div>
-              <div class="key-row"><div class="key-name"><strong>Local development</strong><small>nws_••••••••••••••••••••••••</small></div><span class="key-state"><i></i> Active</span></div>
-            </div>
+            <div class="key-list" id="key-list"><small>Loading API keys…</small></div>
           </section>
         </div>
 
@@ -92,7 +91,7 @@
               <label for="playground-url">Request</label>
               <div class="request-url"><span>GET</span><input id="playground-url" value="/v1/articles?q=technology&amp;limit=10" aria-label="Example API request"></div>
               <label for="playground-header">Headers</label>
-              <textarea id="playground-header" readonly>X-API-Key: nws_preview_key_not_for_use
+              <textarea id="playground-header" readonly>X-API-Key: YOUR_ACCOUNT_API_KEY
 Accept: application/json</textarea>
             </div>
             <div class="response-view">

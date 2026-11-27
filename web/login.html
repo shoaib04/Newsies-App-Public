@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f4ed">
+  <meta name="newsies-api-base" content="http://localhost:8000">
   <meta name="description" content="A preview of the Newsies sign-in experience.">
   <title>Log in — Newsies</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -37,7 +38,7 @@
     <div class="container page-container">
       <div class="auth-layout">
         <div class="auth-intro">
-          <span class="section-kicker"><span>THE DEVELOPER DESK</span> / ACCOUNT PREVIEW</span>
+          <span class="section-kicker"><span>THE DEVELOPER DESK</span> / DEVELOPER ACCOUNT</span>
           <h1>Your next story<br><span>starts here.</span></h1>
           <p>One place for your Newsies account, built for whatever you're building next.</p>
           <div class="auth-rule"></div>
@@ -46,17 +47,14 @@
         <section class="auth-card" aria-labelledby="login-title">
           <span class="auth-overline">WELCOME BACK</span>
           <h2 id="login-title">Log in to Newsies.</h2>
-          <p class="auth-subtitle">A preview of your future developer account.</p>
-          <p class="auth-detail"><a href="dashboard.html">Open the dashboard preview <span aria-hidden="true">→</span></a></p>
-          <p class="auth-notice" id="login-notice"><strong>Preview only.</strong> Login is not available yet. Please don't enter real credentials.</p>
-          <form aria-describedby="login-notice">
-            <fieldset disabled>
-              <div class="field"><label class="label" for="login-email">Email address</label><div class="control"><input class="input" id="login-email" type="email" placeholder="you@example.com" autocomplete="email"></div></div>
-              <div class="field"><label class="label" for="login-password">Password</label><div class="control"><input class="input" id="login-password" type="password" placeholder="Your password" autocomplete="current-password"></div></div>
-              <button class="button button-primary auth-submit" type="submit">Log in <span aria-hidden="true">↗</span></button>
-            </fieldset>
+          <p class="auth-subtitle">Access your Newsies developer account.</p>
+          <p class="auth-notice" id="login-notice" aria-live="polite"></p>
+          <form id="login-form" aria-describedby="login-notice">
+            <div class="field"><label class="label" for="login-email">Email address</label><div class="control"><input class="input" id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div></div>
+            <div class="field"><label class="label" for="login-password">Password</label><div class="control"><input class="input" id="login-password" name="password" type="password" minlength="12" maxlength="1024" placeholder="Your password" autocomplete="current-password" required></div></div>
+            <button class="button button-primary auth-submit" type="submit">Log in <span aria-hidden="true">↗</span></button>
           </form>
-          <p class="auth-switch">New to Newsies? <a href="signup.html">Preview account creation <span aria-hidden="true">→</span></a></p>
+          <p class="auth-switch">New to Newsies? <a href="signup.html">Create an account <span aria-hidden="true">→</span></a></p>
         </section>
       </div>
     </div>
@@ -69,5 +67,6 @@
       <p class="footer-love">Made with <span aria-label="love">♥</span> in India</p>
     </div>
   </footer>
+  <script src="auth.js"></script>
 </body>
 </html>

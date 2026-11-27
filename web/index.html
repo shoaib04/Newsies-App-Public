@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Meet Newsies, a developer-first news API in the making.">
+  <title>Newsies — The developer-first news API</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container page-container">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Newsies home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h5l8 9V9h5v14h-5l-8-9v9H7Z" fill="currentColor"/></svg>
+          </span>
+          <span>newsies<span class="brand-period">.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="#why-newsies">Why Newsies</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#api-preview">API preview</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-account">
+          <a class="nav-signin" href="dashboard.html">Dashboard preview</a>
+          <a class="nav-signin" href="login.html">Log in</a>
+          <a class="nav-cta" href="signup.html">Create account <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="edition-banner">
+      <div class="container page-container edition-inner">
+        <span class="edition-label">THE NEWSIES BRIEF</span>
+        <p>News data for curious builders. <span>Thoughtfully sourced. Built for the web.</span></p>
+        <a href="#why-newsies">Read the story <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <section class="hero-section" id="top">
+      <div class="container page-container">
+        <div class="columns is-vcentered hero-columns">
+          <div class="column is-6-desktop">
+            <div class="hero-copy">
+              <span class="eyebrow"><span class="eyebrow-dot"></span> THE NEWS API FOR DEVELOPERS</span>
+              <h1>Good news.<br><span>Better data.</span></h1>
+              <p class="hero-description">News moves fast. Your ideas should too. Meet the developer-first news API built to make finding and working with news refreshingly simple.</p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#api-preview">See the API in action <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+              </div>
+              <div class="hero-note">
+                <span class="note-icon" aria-hidden="true">✦</span>
+                <span>Source attribution · Rights-aware responses · Developer-first errors</span>
+              </div>
+              <div class="trust-row" aria-label="Newsies trust features">
+                <div class="trust-item"><span aria-hidden="true">01</span> Attribution included</div>
+                <div class="trust-item"><span aria-hidden="true">02</span> Metadata-only first</div>
+                <div class="trust-item"><span aria-hidden="true">03</span> Predictable API errors</div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6-desktop">
+            <div class="preview-wrap" id="api-preview">
+              <div class="floating-label" aria-hidden="true"><span>●</span> FROM THE NEWSROOM</div>
+              <div class="api-window">
+                <div class="window-top">
+                  <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <span>THE NEWSIES API</span>
+                  <span class="window-tag">PREVIEW</span>
+                </div>
+                <div class="window-content">
+                  <div class="request-label">EXAMPLE REQUEST</div>
+                  <div class="request-line"><span>GET</span><code>/v1/articles?q=technology</code></div>
+                  <div class="response-header"><span>EXAMPLE RESPONSE</span><span>JSON</span></div>
+                  <pre aria-label="Illustrative JSON response"><code><span class="syntax-punctuation">{</span>
+  <span class="syntax-key">"items"</span>: <span class="syntax-punctuation">[ {</span>
+    <span class="syntax-key">"id"</span>: <span class="syntax-string">"123e4567-e89b-12d3-a456-426614174000"</span>,
+    <span class="syntax-key">"source"</span>: <span class="syntax-punctuation">{</span>
+      <span class="syntax-key">"id"</span>: <span class="syntax-string">"123e4567-e89b-12d3-a456-426614174001"</span>,
+      <span class="syntax-key">"name"</span>: <span class="syntax-string">"Example News"</span>
+    <span class="syntax-punctuation">},</span>
+    <span class="syntax-key">"title"</span>: <span class="syntax-string">"What's next in tech"</span>,
+    <span class="syntax-key">"url"</span>: <span class="syntax-string">"https://example.com/story"</span>,
+    <span class="syntax-key">"language"</span>: <span class="syntax-string">"en"</span>,
+    <span class="syntax-key">"first_seen_at"</span>: <span class="syntax-string">"2026-11-16T10:00:00Z"</span>
+  <span class="syntax-punctuation">} ],</span>
+  <span class="syntax-key">"has_more"</span>: <span class="syntax-boolean">false</span>
+<span class="syntax-punctuation">}</span></code></pre>
+                </div>
+                <div class="window-bottom"><span><span class="status-dot"></span> SAMPLE DATA</span><span>Made for curious builders <span aria-hidden="true">✦</span></span></div>
+              </div>
+              <div class="preview-caption"><span class="caption-line"></span> A preview of the Newsies API</div>
+              <div class="hero-sparkle sparkle-one" aria-hidden="true">✳</div>
+              <div class="hero-sparkle sparkle-two" aria-hidden="true">✦</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles-strip" aria-label="Product principles">
+      <div class="container page-container strip-inner">
+        <span><span class="strip-symbol">✳</span> BUILT FOR DEVELOPERS</span>
+        <span><span class="strip-symbol">✳</span> NEWS, MADE SEARCHABLE</span>
+        <span><span class="strip-symbol">✳</span> SOURCES THAT STAY VISIBLE</span>
+        <span><span class="strip-symbol">✳</span> LESS NOISE, MORE SIGNAL</span>
+      </div>
+    </section>
+
+    <section class="section features-section" id="why-newsies">
+      <div class="container page-container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker"><span>01</span> THE IDEA</span>
+            <h2>News data without<br>the <em>headache.</em></h2>
+          </div>
+          <p>We're making it easier to go from a question to useful news data—with a little less wrestling along the way.</p>
+        </div>
+        <div class="columns is-variable is-4 feature-columns">
+          <div class="column">
+            <article class="feature-card">
+              <div class="feature-icon icon-mint" aria-hidden="true">⌕</div>
+              <span class="feature-number">01 / DISCOVER</span>
+              <h3>Find your story.</h3>
+              <p>Search news by keyword and narrow your results with filters for sources, language, and more.</p>
+              <span class="feature-foot">SEARCH THAT MAKES SENSE <span aria-hidden="true">↗</span></span>
+            </article>
+          </div>
+          <div class="column">
+            <article class="feature-card">
+              <div class="feature-icon icon-yellow" aria-hidden="true">{ }</div>
+              <span class="feature-number">02 / BUILD</span>
+              <h3>Get building faster.</h3>
+              <p>A straightforward API and a consistent response format give you a clear place to start.</p>
+              <span class="feature-foot">A DEVELOPER-FIRST APPROACH <span aria-hidden="true">↗</span></span>
+            </article>
+          </div>
+          <div class="column">
+            <article class="feature-card">
+              <div class="feature-icon icon-lilac" aria-hidden="true">↗</div>
+              <span class="feature-number">03 / UNDERSTAND</span>
+              <h3>Keep the context.</h3>
+              <p>Know where an article came from with source attribution and links back to the original.</p>
+              <span class="feature-foot">CREDIT WHERE IT'S DUE <span aria-hidden="true">↗</span></span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="how-it-works">
+      <div class="container page-container">
+        <div class="workflow-panel">
+          <div class="columns is-vcentered is-variable is-8">
+            <div class="column is-5-desktop">
+              <span class="section-kicker"><span>02</span> KEEP IT SIMPLE</span>
+              <h2>A little less setup.<br><em>A lot more building.</em></h2>
+              <p>From discovering sources to finding the stories that matter, Newsies is being designed to make news data feel a little more approachable.</p>
+              <a class="button button-light" href="#api-preview">Take another look <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="column is-6-desktop is-offset-1-desktop">
+              <ol class="steps-list">
+                <li><span>01</span><div><h3>Explore your sources</h3><p>Discover the sources available in the catalogue.</p></div><b aria-hidden="true">↗</b></li>
+                <li><span>02</span><div><h3>Search for what matters</h3><p>Use a query and filters to find relevant articles.</p></div><b aria-hidden="true">↗</b></li>
+                <li><span>03</span><div><h3>Make something great</h3><p>Bring structured news data into your next idea.</p></div><b aria-hidden="true">↗</b></li>
+              </ol>
+            </div>
+          </div>
+          <span class="workflow-decoration" aria-hidden="true">✳</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container page-container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker"><span>03</span> THE PRICING DESK</span>
+            <h2 id="pricing-title">Room to build.<br><em>Room to grow.</em></h2>
+          </div>
+          <p>From a first experiment to something bigger, we're exploring plans for every chapter of your project.</p>
+        </div>
+        <div class="pricing-notice"><strong>Proposed pricing</strong> <span>These plans and request allowances are illustrative, subject to change, and not available for purchase yet.</span></div>
+        <div class="columns is-multiline is-variable is-2 pricing-columns">
+          <div class="column is-half-tablet is-one-fifth-desktop">
+            <article class="pricing-card">
+              <span class="pricing-index">01 / EXPLORE</span>
+              <h3>Free</h3>
+              <p class="pricing-description">For your first idea.</p>
+              <p class="price"><span>$0</span><small> / month</small></p>
+              <p class="pricing-quota"><strong>1,000</strong> requests / day</p>
+              <a href="contact.html" class="pricing-link">Ask about Free <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="column is-half-tablet is-one-fifth-desktop">
+            <article class="pricing-card">
+              <span class="pricing-index">02 / START</span>
+              <h3>Starter</h3>
+              <p class="pricing-description">For a project in motion.</p>
+              <p class="price"><span>$19</span><small> / month</small></p>
+              <p class="pricing-quota"><strong>50,000</strong> requests / month</p>
+              <a href="contact.html" class="pricing-link">Ask about Starter <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="column is-half-tablet is-one-fifth-desktop">
+            <article class="pricing-card pricing-featured">
+              <span class="pricing-index">03 / BUILD</span>
+              <h3>Pro</h3>
+              <p class="pricing-description">For ambitious builders.</p>
+              <p class="price"><span>$49</span><small> / month</small></p>
+              <p class="pricing-quota"><strong>250,000</strong> requests / month</p>
+              <a href="contact.html" class="pricing-link">Ask about Pro <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="column is-half-tablet is-one-fifth-desktop">
+            <article class="pricing-card">
+              <span class="pricing-index">04 / GROW</span>
+              <h3>Growth</h3>
+              <p class="pricing-description">For a growing audience.</p>
+              <p class="price"><span>$99</span><small> / month</small></p>
+              <p class="pricing-quota"><strong>1 million</strong> requests / month</p>
+              <a href="contact.html" class="pricing-link">Ask about Growth <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="column is-half-tablet is-one-fifth-desktop">
+            <article class="pricing-card">
+              <span class="pricing-index">05 / SCALE</span>
+              <h3>Scale</h3>
+              <p class="pricing-description">For the bigger picture.</p>
+              <p class="price"><span>$299</span><small> / month</small></p>
+              <p class="pricing-quota"><strong>5 million</strong> requests / month</p>
+              <a href="contact.html" class="pricing-link">Ask about Scale <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+        <p class="pricing-note">Pricing is in USD. Final features, limits, and terms will be confirmed before launch.</p>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="container page-container closing-inner">
+        <span class="closing-star" aria-hidden="true">✳</span>
+        <span class="section-kicker"><span>04</span> THE BEGINNING</span>
+        <h2>Something good is<br><em>in the works.</em></h2>
+        <p>Newsies is at the beginning of its journey. This page is an early look at the idea, not a live API or signup.</p>
+        <a class="button button-primary" href="#top">Back to the top <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container page-container footer-inner">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h5l8 9V9h5v14h-5l-8-9v9H7Z" fill="currentColor"/></svg></span><span>newsies<span class="brand-period">.</span></span></a>
+      <p>The developer-first news API. In the making.</p>
+      <a href="contact.html">Contact us <span aria-hidden="true">↗</span></a>
+      <p class="footer-love">Made with <span aria-label="love">♥</span> in India</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

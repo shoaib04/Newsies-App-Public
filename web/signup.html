@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="A preview of the Newsies account-creation experience.">
+  <title>Create an account — Newsies</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container page-container">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html#top" aria-label="Newsies home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h5l8 9V9h5v14h-5l-8-9v9H7Z" fill="currentColor"/></svg></span>
+          <span>newsies<span class="brand-period">.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#why-newsies">Why Newsies</a>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#api-preview">API preview</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-account">
+          <a class="nav-signin" href="login.html">Log in</a>
+          <a class="nav-cta" href="signup.html" aria-current="page">Create account <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="auth-main">
+    <div class="container page-container">
+      <div class="auth-layout">
+        <div class="auth-intro">
+          <span class="section-kicker"><span>THE DEVELOPER DESK</span> / ACCOUNT PREVIEW</span>
+          <h1>Make room<br>for <span>good ideas.</span></h1>
+          <p>Here's an early look at how you'll join the Newsies developer community.</p>
+          <div class="auth-rule"></div>
+          <p class="auth-intro-note">The developer-first news API.<br>Thoughtfully sourced. Built for the web.</p>
+        </div>
+        <section class="auth-card" aria-labelledby="signup-title">
+          <span class="auth-overline">A NEW CHAPTER</span>
+          <h2 id="signup-title">Create your account.</h2>
+          <p class="auth-subtitle">A first look at your Newsies profile.</p>
+          <p class="auth-notice" id="signup-notice"><strong>Preview only.</strong> Accounts can't be created yet. Please don't enter personal information.</p>
+          <form aria-describedby="signup-notice">
+            <fieldset disabled>
+              <div class="field"><label class="label" for="signup-name">Your name</label><div class="control"><input class="input" id="signup-name" type="text" placeholder="Your name" autocomplete="name"></div></div>
+              <div class="field"><label class="label" for="signup-email">Email address</label><div class="control"><input class="input" id="signup-email" type="email" placeholder="you@example.com" autocomplete="email"></div></div>
+              <div class="field"><label class="label" for="signup-password">Password</label><div class="control"><input class="input" id="signup-password" type="password" placeholder="Create a password" autocomplete="new-password"></div></div>
+              <button class="button button-primary auth-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+            </fieldset>
+          </form>
+          <p class="auth-detail">Email verification is planned before sign-in. No verification emails are sent in this preview.</p>
+          <p class="auth-detail"><a href="dashboard.html">Preview the developer dashboard <span aria-hidden="true">→</span></a></p>
+          <p class="auth-switch">Already have an account? <a href="login.html">Preview login <span aria-hidden="true">→</span></a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container page-container footer-inner">
+      <a class="brand footer-brand" href="index.html#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h5l8 9V9h5v14h-5l-8-9v9H7Z" fill="currentColor"/></svg></span><span>newsies<span class="brand-period">.</span></span></a>
+      <p>The developer-first news API. In the making.</p>
+      <a href="contact.html">Contact us <span aria-hidden="true">↗</span></a>
+      <p class="footer-love">Made with <span aria-label="love">♥</span> in India</p>
+    </div>
+  </footer>
+</body>
+</html>

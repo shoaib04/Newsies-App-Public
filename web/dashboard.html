@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee7">
+  <meta name="description" content="A preview of the Newsies developer dashboard.">
+  <title>Developer dashboard — Newsies</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#main">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="index.html#top" aria-label="Newsies home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 23V9h5l8 9V9h5v14h-5l-8-9v9H7Z" fill="currentColor"/></svg></span>
+        <span>newsies<span class="brand-period">.</span></span>
+      </a>
+      <nav class="dashboard-nav">
+        <a href="#overview" aria-current="page"><span aria-hidden="true">▦</span> Overview</a>
+        <a href="#playground"><span aria-hidden="true">⌕</span> API playground</a>
+        <a href="#api-keys"><span aria-hidden="true">◆</span> API keys</a>
+        <a href="#usage"><span aria-hidden="true">↗</span> Usage</a>
+        <a href="admin.html"><span aria-hidden="true">◉</span> Admin console</a>
+        <a href="index.html#api-preview"><span aria-hidden="true">≡</span> Documentation</a>
+      </nav>
+      <div class="dashboard-profile">
+        <span class="dashboard-avatar" aria-hidden="true">NS</span>
+        <strong>Newsies preview</strong>
+        <small>Developer workspace</small>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <p class="dashboard-breadcrumb">Workspace / <strong>Overview</strong></p>
+        <span class="preview-badge"><i></i> PREVIEW ONLY</span>
+      </header>
+
+      <main id="main" class="dashboard-content">
+        <div class="dashboard-heading" id="overview">
+          <div>
+            <span class="section-kicker"><span>THE DEVELOPER DESK</span> / GOOD MORNING</span>
+            <h1>Your newsroom, at a glance.</h1>
+          </div>
+          <div class="dashboard-actions">
+            <a class="button button-light" href="index.html">← Public site</a>
+            <a class="button button-primary" href="#api-keys">Create API key <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <section class="dashboard-grid" aria-label="Account summary">
+          <article class="metric-card"><span>REQUESTS TODAY</span><strong>1,248</strong><small><b class="metric-trend">↑ 18%</b> from yesterday</small></article>
+          <article class="metric-card"><span>DAILY LIMIT</span><strong>1,000</strong><small>Per active key</small></article>
+          <article class="metric-card"><span>AVAILABLE SOURCES</span><strong>12</strong><small>Across 4 categories</small></article>
+          <article class="metric-card"><span>SERVICE STATUS</span><strong>Operational</strong><small><b class="metric-trend">●</b> 99.9% uptime</small></article>
+        </section>
+
+        <div class="dashboard-workspace">
+          <section class="panel-card" id="usage" aria-labelledby="usage-title">
+            <header class="panel-header"><h2 id="usage-title">Request usage</h2><a href="#usage">Last 7 days <span aria-hidden="true">⌄</span></a></header>
+            <div class="usage-chart" aria-label="Illustrative usage chart">
+              <div class="chart-column"><i style="height:42px"></i><span>Mon</span></div>
+              <div class="chart-column"><i style="height:68px"></i><span>Tue</span></div>
+              <div class="chart-column"><i style="height:54px"></i><span>Wed</span></div>
+              <div class="chart-column"><i style="height:92px"></i><span>Thu</span></div>
+              <div class="chart-column"><i style="height:76px"></i><span>Fri</span></div>
+              <div class="chart-column"><i style="height:118px"></i><span>Sat</span></div>
+              <div class="chart-column"><i style="height:106px"></i><span>Sun</span></div>
+            </div>
+            <div class="usage-footer"><span>Successful requests <strong>98.7%</strong></span><span>Avg. latency <strong>184 ms</strong></span></div>
+          </section>
+
+          <section class="panel-card" id="api-keys" aria-labelledby="keys-title">
+            <header class="panel-header"><h2 id="keys-title">API keys</h2><button type="button" id="new-key-button">+ New key</button></header>
+            <div class="key-list">
+              <div class="key-row"><div class="key-name"><strong>Production</strong><small>nws_••••••••••••••••••••••••</small></div><span class="key-state"><i></i> Active</span></div>
+              <div class="key-row"><div class="key-name"><strong>Local development</strong><small>nws_••••••••••••••••••••••••</small></div><span class="key-state"><i></i> Active</span></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel-card playground" id="playground" aria-labelledby="playground-title">
+          <header class="panel-header">
+            <h2 id="playground-title">API playground</h2>
+            <button class="dashboard-copy" type="button" id="copy-curl">Copy cURL <span aria-hidden="true">↗</span></button>
+          </header>
+          <div class="playground-grid">
+            <div class="request-editor">
+              <label for="playground-url">Request</label>
+              <div class="request-url"><span>GET</span><input id="playground-url" value="/v1/articles?q=technology&amp;limit=10" aria-label="Example API request"></div>
+              <label for="playground-header">Headers</label>
+              <textarea id="playground-header" readonly>X-API-Key: nws_preview_key_not_for_use
+Accept: application/json</textarea>
+            </div>
+            <div class="response-view">
+              <span class="response-status">● 200 OK · 184 ms · SAMPLE RESPONSE</span>
+              <pre id="playground-response">{
+  "items": [
+    {
+      "title": "What's next in technology",
+      "source": { "name": "Example News" },
+      "published_at": "2026-11-25T10:30:00Z"
+    }
+  ],
+  "has_more": false
+}</pre>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
